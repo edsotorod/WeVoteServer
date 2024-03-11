@@ -89,7 +89,7 @@ PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 # Consider switching to the way that Two Scoops of Django 1.8 suggests file path handling, section 5.6
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_environment_variable("SECRET_KEY")
+SECRET_KEY=get_environment_variable("SECRET_KEY")
 
 # Comment out when running Heroku
 ALLOWED_HOSTS = [

@@ -1,6 +1,7 @@
 # apis_v1/test_views_voter_email_address_save.py
 # Brought to you by We Vote. Be good.
 # -*- coding: UTF-8 -*-
+# "pbkdf2_sha256$260000$qW5s241tYo0kg50o05pKDP$aALBlgi0AlELFzNwPpClH6FjtPsuml9f08/KBagcuoA="
 
 from django.urls import reverse
 from django.test import TestCase
@@ -28,7 +29,7 @@ class WeVoteAPIsV1TestsVoterEmailAddressSave(TestCase):
                          "voter_device_id expected in the voterEmailAddressSaveView json response, and not found")
         
         self.assertEqual(json_data['status'], 
-                        "VOTER_EMAIL_ADDRESS_SAVE-START VALID_VOTER_DEVICE_ID_MISSING VOTER_DEVICE_ID_NOT_VALID ",
+                        "VOTER_EMAIL_ADDRESS_SAVE-START VALID_VOTER_DEVICE_ID_MISSING  VOTER_DEVICE_ID_NOT_VALID ",
             "status: {status} ('VOTER_EMAIL_ADDRESS_SAVE-START VALID_VOTER_DEVICE_ID_MISSING VOTER_DEVICE_ID_NOT_VALID' expected), "
             "voter_device_id: {voter_device_id}".format(status=json_data['status'], 
             voter_device_id=json_data['voter_device_id']))
